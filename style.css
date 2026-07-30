@@ -1,1 +1,132 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Cartões de Conteúdo */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Imagens */
+.image-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Conteúdo do Cartão */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h2 {
+    color: #1e3c72;
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+}
+
+.card-content p {
+    margin-bottom: 1.2rem;
+    color: #555;
+}
+
+/* Links das Fontes */
+.source-link {
+    display: inline-block;
+    color: #2a5298;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    word-break: break-all;
+    border-bottom: 1px dashed #2a5298;
+    transition: color 0.2s ease;
+}
+
+.source-link:hover {
+    color: #1e3c72;
+    border-bottom-style: solid;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #e9ecef;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Adaptabilidade para telas maiores */
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 45%;
+        height: 260px;
+    }
+
+    .card-content {
+        width: 55%;
+        padding: 2rem;
+    }
+}
